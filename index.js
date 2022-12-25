@@ -7,6 +7,11 @@ for (var i = 1; i <= 5; i++) {
   var salario_bruto = parseFloat(prompt("Digite seu salário bruto: "));
   var dependente = parseInt(prompt("Digite o número de dependentes: "));
 
+  for (var d = 1; d <= dependente; d++) {
+    var ganho_dependente = parseFloat(prompt("Digite seu ganho mensal: "));
+    salario_bruto = salario_bruto + ganho_dependente;
+  }
+
   var renda_percapta = salario_bruto / (dependente + 1);
 
   if (renda_percapta >= 500) {
